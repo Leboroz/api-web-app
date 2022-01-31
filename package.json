@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "webpack serve --mode=development --config webpack.config.js",
-    "build": "webpack --mode=distribution",
+    "build": "webpack --mode=production",
     "deploy": "gh-pages -d dist",
     "lint:style": "stylelint \"**/*.{css,scss}\" --fix",
     "lint:es": "eslint . --fix"
@@ -37,6 +37,7 @@
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.7",
+    "sass": "^1.49.0",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.68.0",
