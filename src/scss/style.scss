@@ -1,0 +1,22 @@
+body {
+  background-color: bisque;
+}
+
+/* SCSS HEX */
+$medium-sea-green: #44af69ff;
+$red-salsa: #f8333cff;
+$bright-yellow-crayola: #fcab10ff;
+$blue-munsell: #2b9eb3ff;
+$dutch-white: #dbd5b5ff;
+
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #44af69ff, #f8333cff, #fcab10ff, #2b9eb3ff, #dbd5b5ff);
+$gradient-right: linear-gradient(90deg, #44af69ff, #f8333cff, #fcab10ff, #2b9eb3ff, #dbd5b5ff);
+$gradient-bottom: linear-gradient(180deg, #44af69ff, #f8333cff, #fcab10ff, #2b9eb3ff, #dbd5b5ff);
+$gradient-left: linear-gradient(270deg, #44af69ff, #f8333cff, #fcab10ff, #2b9eb3ff, #dbd5b5ff);
+$gradient-top-right: linear-gradient(45deg, #44af69ff, #f8333cff, #fcab10ff, #2b9eb3ff, #dbd5b5ff);
+$gradient-bottom-right: linear-gradient(135deg, #44af69ff, #f8333cff, #fcab10ff, #2b9eb3ff, #dbd5b5ff);
+$gradient-top-left: linear-gradient(225deg, #44af69ff, #f8333cff, #fcab10ff, #2b9eb3ff, #dbd5b5ff);
+$gradient-bottom-left: linear-gradient(315deg, #44af69ff, #f8333cff, #fcab10ff, #2b9eb3ff, #dbd5b5ff);
+$gradient-radial: radial-gradient(#44af69ff, #f8333cff, #fcab10ff, #2b9eb3ff, #dbd5b5ff);
