@@ -1,6 +1,10 @@
 body {
   background-color: bisque;
 }
+header footer {
+  display: flex;
+  flex-direction: row;
+}
 
 /* SCSS HEX */
 $medium-sea-green: #44af69ff;
