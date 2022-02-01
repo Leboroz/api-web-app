@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack serve --mode=development --config webpack.config.js",
+    "start": "webpack serve --mode=development --config webpack.config.js --open",
     "build": "webpack --mode=production",
     "deploy": "gh-pages -d dist",
     "lint:style": "stylelint \"**/*.{css,scss}\" --fix",
