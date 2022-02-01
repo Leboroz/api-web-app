@@ -24,6 +24,6 @@ export default class FoodAPI {
         return mealList
     }
     static getMealByID(id) {
-        return fetch(his.URL + this.BY_ID + id).then(meal => meal.json())
+       return fetch(this.URL + this.BY_ID + id).then(res => res.json())
   }
 }
