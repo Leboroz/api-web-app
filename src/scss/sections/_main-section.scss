@@ -1,5 +1,6 @@
 @use "../components/mixins" as *;
 @use "../variables" as *;
+@use "../components/animations" as *;
 
 .grid {
   display: flex;
@@ -52,6 +53,7 @@
 
         .card-title {
           height: 4rem;
+          width: 16ch;
           color: #fff;
         }
 
@@ -60,10 +62,21 @@
           flex-direction: column;
           align-items: center;
           justify-content: space-around;
+          font-weight: 600;
+          color: white;
 
           .fa-heart {
             font-size: 1.5rem;
             color: rgba($color: red, $alpha: 0.9);
+            transition: transform 500ms;
+
+            &.pop {
+              @include pop();
+            }
+
+            &:hover {
+              transform: scale(1.2);
+            }
           }
         }
       }
