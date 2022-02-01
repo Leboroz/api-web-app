@@ -22,4 +22,7 @@ export default class FoodAPI {
         }
         this.getRandom()
     }
+    static getMealByID(id) {
+        return fetch(his.URL + this.BY_ID +id).then(meal => meal.jsan())
+  }
 }
