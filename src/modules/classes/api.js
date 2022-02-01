@@ -15,11 +15,12 @@ export default class FoodAPI {
     static getRandom() {
       return fetch(this.URL + this.RANDOM).then(res => res.json())
     }
-    static getRandomList() {
+
+    static async getRandomList() {
         const mealList = []
         for (let i = 0; i < 10; i+=1) {
-            this.getRandom().then(({ meals }) => mealList.concat(meals))
+          await  this.getRandom().then(({ meals }) => mealList.push(meals[0]))
         }
-        this.getRandom()
+        return mealList
     }
 }
