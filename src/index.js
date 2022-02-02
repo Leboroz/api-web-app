@@ -3,6 +3,8 @@ import createCard from './modules/components/card';
 import grid from './modules/components/grid';
 import subHeader from './modules/components/list-counter';
 import './scss/style.scss';
+import commentPop from './modules/commentpop';
+
 
 document.querySelector('main').append(subHeader, grid);
 
@@ -13,3 +15,4 @@ FoodAPI.getRandom().then(({ meals }) => {
     grid.appendChild(createCard(strMeal, strMealThumb, idMeal));
   }
 });
+

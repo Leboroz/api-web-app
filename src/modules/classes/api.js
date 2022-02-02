@@ -23,6 +23,11 @@ export default class FoodAPI {
 
   static FILTER_BY_AREA = 'filter.php?a='
 
+
+  static getURL(id) {
+    return this.URL + this.BY_ID + id;
+  }
+
   static CATEGORIES_LIST = [
     'Beef',
     'Breakfast',
@@ -48,7 +53,5 @@ export default class FoodAPI {
     ).then((res) => res.json());
   }
 
-  static getMealByID(id) {
-    return fetch(this.URL + this.BY_ID + id).then((res) => res.json());
-  }
 }
+
