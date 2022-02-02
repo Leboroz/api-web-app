@@ -3,6 +3,7 @@ const displayComment = (meal) => {
     const selectMeal = mealObj.meals[0];
     const commentModal = document.createElement('div');
     commentModal.className = 'modal-popup';
+    commentModal.id = 'comment-popup';
     commentModal.innerHTML = `
     <img src="${selectMeal.strMealThumb}" alt="Meal image">
     <h1>${selectMeal.strMeal}</h1>
