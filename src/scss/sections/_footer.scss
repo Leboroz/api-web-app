@@ -1,7 +1,13 @@
 .footer {
-  display: flex;
   padding-inline: 3rem;
   gap: 5rem;
+  height: 100px;
+  display: flex;
+
+  h4 {
+    padding-top: 26px;
+  }
+
   img {
     object-fit: contain;
   }
