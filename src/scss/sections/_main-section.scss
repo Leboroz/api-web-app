@@ -1,0 +1,91 @@
+@use "../components/mixins" as *;
+@use "../variables" as *;
+@use "../components/animations" as *;
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3333%;
+  padding-inline: 3rem;
+  margin-top: 3rem;
+
+  .card {
+    width: 100%;
+    padding-block: 1rem;
+    background-color: rgba($medium-sea-green, $alpha: 1);
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint-up(md) {
+      width: 49%;
+    }
+
+    @include breakpoint-up(xl) {
+      width: 32%;
+    }
+
+    @include breakpoint-up(xxl) {
+      width: 24%;
+    }
+
+    .img-wrapper {
+      width: 90%;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 90%;
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+
+        .card-title {
+          height: 4rem;
+          width: 16ch;
+          color: #fff;
+        }
+
+        .like-button {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          font-weight: 600;
+          color: white;
+
+          .fa-heart {
+            font-size: 1.5rem;
+            color: rgba($color: red, $alpha: 0.9);
+            transition: transform 500ms;
+
+            &.pop {
+              @include pop();
+            }
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+      }
+
+      .btn {
+        display: block;
+        width: max-content;
+        align-self: center;
+      }
+    }
+  }
+}

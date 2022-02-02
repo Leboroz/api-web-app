@@ -23,11 +23,35 @@ export default class FoodAPI {
 
   static FILTER_BY_AREA = 'filter.php?a='
 
-  static getRandom() {
-    return fetch(this.URL + this.RANDOM).then((res) => res.json());
-  }
 
   static getURL(id) {
     return this.URL + this.BY_ID + id;
   }
+
+  static CATEGORIES_LIST = [
+    'Beef',
+    'Breakfast',
+    'Chicken',
+    'Dessert',
+    'Goat',
+    'Lamb',
+    'Miscellaneous',
+    'Pasta',
+    'Pork',
+    'Seafood',
+    'Side',
+    'Starter',
+    'Vegan',
+    'Vegetarian',
+  ]
+
+  static getRandom() {
+    return fetch(
+      this.URL
+        + this.FILTER_BY_CATEGORY
+        + this.CATEGORIES_LIST[Math.floor(Math.random() * 13)],
+    ).then((res) => res.json());
+  }
+
 }
+
