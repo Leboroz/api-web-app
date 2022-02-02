@@ -17,8 +17,7 @@ export default function createCard(mealName, strMealImage, idMeal) {
             <span><span class="counter">0</span> likes</span>
         </div>
     </article>
-    <button class="btn" type="button">Comments</button>
-    <button class="btn" type="button">Reservations</button>`
+    <button class="btn" type="button">Comments</button>`
 
   mealCard.append(mealImage, mealCardBody)
 
