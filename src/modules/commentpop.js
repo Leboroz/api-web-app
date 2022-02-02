@@ -1,9 +1,9 @@
-import FoodAPI from './classes/api.js';
-import displayComment from './displayComment.js';
+import FoodAPI from './classes/api';
+import displayComment from './displayComment';
 
-const commentPop =  async (mealId) => {
+const commentPop = async (mealId) => {
   const meal = await fetch(FoodAPI.getURL(mealId));
-  displayComment(meal.json())  
+  displayComment(meal.json());
 };
   // dispComment(meal);
 
