@@ -1,8 +1,7 @@
 import FoodAPI from '../classes/api';
-import displayComment from '../displayComment';
+import displayComment from './displayComment';
 
 const commentPop = async (mealId) => {
-  console.log(mealId);
   const meal = await fetch(FoodAPI.getURL(mealId));
   displayComment(meal.json());
 };
