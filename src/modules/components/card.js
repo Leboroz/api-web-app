@@ -4,6 +4,7 @@ export default function createCard(mealName, strMealImage, idMeal, likes) {
   const mealCard = document.createElement('div')
   mealCard.className = 'card'
   mealCard.id = `meal-${idMeal}`
+  likes = likes.length ? likes[0].likes : 0
 
   const mealImage = document.createElement('figure')
   mealImage.className = 'img-wrapper'
@@ -16,9 +17,7 @@ export default function createCard(mealName, strMealImage, idMeal, likes) {
         <h2 class="card-title">${mealName}</h2>
         <div class="like-button">
             <i class="fas fa-heart"></i>
-            <span><span class="likes-counter">${
-              likes.length ? likes[0].likes : 0
-            }</span> likes</span>
+            <span><span class="likes-counter">${likes}</span> likes</span>
         </div>
     </article>
     <button class="btn" type="button">Comments</button>`
@@ -31,11 +30,8 @@ export default function createCard(mealName, strMealImage, idMeal, likes) {
     if (target.className === 'fas fa-heart') {
       target.classList.add('pop')
       InvolvementAPI.setLike(idMeal + '').then(() => {
-        InvolvementAPI.getLikes().then((likes) => {
-          mealCardBody.querySelector('.likes-counter').innerHTML = likes.filter(
-            ({ item_id }) => item_id === idMeal
-          )[0].likes
-        })
+        const like = mealCardBody.querySelector('.likes-counter')
+        like.innerHTML = likes += 1
       })
 
       setTimeout(() => {
