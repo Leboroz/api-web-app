@@ -1,3 +1,5 @@
+import commentPop from './commentpop';
+
 export default function createCard(mealName, strMealImage, idMeal) {
   const mealCard = document.createElement('div');
   mealCard.className = 'card';
@@ -17,7 +19,7 @@ export default function createCard(mealName, strMealImage, idMeal) {
             <span><span class="counter">0</span> likes</span>
         </div>
     </article>
-    <button class="btn" type="button">Comments</button>`;
+    <button class="comment-btn" type="button">Comments</button>`;
 
   mealCard.append(mealImage, mealCardBody);
 
@@ -30,6 +32,11 @@ export default function createCard(mealName, strMealImage, idMeal) {
         target.classList.remove('pop');
       }, 500);
     }
+  });
+
+  const commentButton = mealCardBody.querySelector('.comment-btn');
+  commentButton.addEventListener('click', () => {
+    commentPop(mealCard.id.slice(5));
   });
   return mealCard;
 }
