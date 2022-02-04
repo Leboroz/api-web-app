@@ -1,8 +1,9 @@
 header {
   display: flex;
-  justify-content: space-between;
   padding-inline: 3rem;
   height: 100px;
+  gap: 3rem;
+  align-items: center;
 
   img {
     object-fit: contain;

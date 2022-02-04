@@ -5,21 +5,27 @@ import Comment from '../classes/comment';
 const displayComment = (meal) => {
   meal.then(async (mealObj) => {
     const selectMeal = mealObj.meals[0];
+    const background = document.createElement('article');
+    background.className = 'modal';
     const commentModal = document.createElement('div');
     commentModal.className = 'modal-popup';
     commentModal.id = 'comment-popup';
     commentModal.innerHTML = `
     <button id="close-modal" data-close>✕</button>
-    <img src="${selectMeal.strMealThumb}" alt="Meal image">
+    <figure class="img-wrapper">
+      <img src="${selectMeal.strMealThumb}" alt="Meal image">
+    </figure>
     <h1>${selectMeal.strMeal}</h1>
     <p>${selectMeal.strInstructions}</p>
     <h3>Add a Comment</h3>
-    <input type="text" id='comment-name' placeholder="Your Name">
-    <input type="text" id='comment-content' placeholder="Your Insights">
-    <button id="add-comment-btn" type="button">Submit</button>
+    <input class="field" type="text" id='comment-name' placeholder="Your Name">
+    <textarea class="field" id='comment-content' placeholder="Your Insights"></textarea>
+    <button class="btn" id="add-comment-btn" type="button">Submit</button>
     <h2>Comments</h2>`;
+    background.appendChild(commentModal);
     const main = document.querySelector('main');
-    main.appendChild(commentModal);
+    main.appendChild(background);
+    document.querySelector('body').classList.add('hidden');
 
     let comments = await InvolvementAPI.getComments(selectMeal.idMeal);
 
@@ -28,8 +34,12 @@ const displayComment = (meal) => {
     commentList.innerHTML = commentsToList(comments);
     commentModal.appendChild(commentList);
 
-    const closeModal = document.getElementById('close-modal');
-    closeModal.addEventListener('click', () => main.removeChild(commentModal));
+    const closeModal = commentModal.querySelector('#close-modal');
+
+    closeModal.addEventListener('click', () => {
+      background.remove();
+      document.querySelector('body').classList.remove('hidden');
+    });
 
     const addComment = document.getElementById('add-comment-btn');
     addComment.addEventListener('click', async () => {

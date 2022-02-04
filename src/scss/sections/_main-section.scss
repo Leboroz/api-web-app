@@ -1,6 +1,10 @@
-@use "../components/mixins" as *;
-@use "../variables" as *;
-@use "../components/animations" as *;
+@use '../components/mixins' as *;
+@use '../variables' as *;
+@use '../components/animations' as *;
+
+.meals-counter {
+  margin-left: 3rem;
+}
 
 .grid {
   display: flex;
