@@ -1,0 +1,58 @@
+{
+  "name": "api-web-app",
+  "version": "0.1.0",
+  "description": "This is a web app using API to display some cards built with JavaScript, HTML5 and SASS. This is a capstone project for module 2 in the Microvese curriculum",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "webpack serve --mode=development --config webpack.config.js --open",
+    "build": "webpack --mode=production",
+    "deploy": "gh-pages -d dist",
+    "lint:style": "stylelint \"**/*.{css,scss}\" --fix",
+    "lint:es": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leboroz/api-web-app.git"
+  },
+  "keywords": [
+    "capstone",
+    "project",
+    "microverse",
+    "leboroz",
+    "gdumani"
+  ],
+  "author": "Leonardo Albornoz & Giancarlo Dumani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Leboroz/api-web-app/issues"
+  },
+  "homepage": "https://github.com/Leboroz/api-web-app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/plugin-transform-runtime": "^7.16.10",
+    "@babel/preset-env": "^7.16.11",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.4",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.7",
+    "sass": "^1.49.0",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.3"
+  },
+  "dependencies": {
+    "jsdom": "^19.0.0"
+  }
+}

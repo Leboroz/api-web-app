@@ -1,72 +1,76 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Kitche heaven
 
-> Description the project.
-
+> This is a web application built with JavaScript and SASS that displays a grid of recipes fetched from an API.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- JavaScript
+- SASS
+- Node.js
+- Webpack
+- Babel
 
-## Live Demo (if available)
+## Video Demo Here
 
-[Live Demo Link](https://livedemo.com)
+[Video](https://drive.google.com/file/d/10FZ2Zn-ZM9Qvd6KpRzDdc-YZNHaVBjYk/view?usp=sharing)
 
+## Live Demo
+
+[Live Demo Link](https://leboroz.github.io/api-web-app)
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+Install
+
+- git
+- node.js
+
 ### Setup
+
+- open Terminal or bash
+- run `git clone https://github.com/Leboroz/api-web-app.git`
 
 ### Install
 
-### Usage
+- run `npm install`
 
 ### Run tests
 
+- run `npm run test`
+
 ### Deployment
 
-
+- run `npm run deploy`
 
 ## Authors
 
-👤 **Author1**
+👤 **Leonardo Albornoz**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Leboroz](https://github.com/leboroz)
+- Twitter: [@Leboroz](https://twitter.com/leboroz)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/leonardo-albornoz-216784198/)
 
-👤 **Author2**
+👤 **Giancarlo Dumani**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@gdumani](https://github.com/gdumani)
+- Twitter: [@gdumani1](https://twitter.com/gdumani1)
+- LinkedIn: [ Giancarlo-Dumani](https://www.linkedin.com/in/gdumani/?originalSubdomain=cr)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/leboroz/api-web-app/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 

@@ -1,0 +1,12 @@
+header {
+  display: flex;
+  padding-inline: 3rem;
+  height: 150px;
+  gap: 3rem;
+  align-items: center;
+
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
+}

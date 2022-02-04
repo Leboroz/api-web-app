@@ -1,0 +1,29 @@
+/* SCSS HEX */
+$medium-sea-green: #44af69ff;
+$secondary: #f8333cff;
+$primary: #fcab10ff;
+$blue-munsell: #2b9eb3ff;
+$dutch-white: #dbd5b5ff;
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Open sans', Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Exo 2', Arial, Helvetica, sans-serif;
+}
+
+body.hidden {
+  overflow-y: hidden;
+}

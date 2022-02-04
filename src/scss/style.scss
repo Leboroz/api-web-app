@@ -1,0 +1,13 @@
+// IMPORT VARIABLES
+@use './variables';
+
+// IMPORT COMPONENTS
+@use './components/animations';
+@use './components/mixins';
+@use './components/button';
+@use './components/pop-up';
+
+// IMPORT SECTIONS
+@use './sections/header';
+@use './sections/main-section';
+@use './sections/footer';
