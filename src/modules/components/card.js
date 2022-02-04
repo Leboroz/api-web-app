@@ -1,9 +1,11 @@
 import commentPop from './commentpop';
+import InvolvementAPI from '../classes/involvementapi';
 
-export default function createCard(mealName, strMealImage, idMeal) {
+export default function createCard(mealName, strMealImage, idMeal, likes) {
   const mealCard = document.createElement('div');
   mealCard.className = 'card';
   mealCard.id = `meal-${idMeal}`;
+  likes = likes.length ? likes[0].likes : 0;
 
   const mealImage = document.createElement('figure');
   mealImage.className = 'img-wrapper';
@@ -16,10 +18,10 @@ export default function createCard(mealName, strMealImage, idMeal) {
         <h2 class="card-title">${mealName}</h2>
         <div class="like-button">
             <i class="fas fa-heart"></i>
-            <span><span class="counter">0</span> likes</span>
+            <span><span class="likes-counter">${likes}</span> likes</span>
         </div>
     </article>
-    <button class="comment-btn" type="button">Comments</button>`;
+    <button class="btn comment-btn" type="button">Comments</button>`;
 
   mealCard.append(mealImage, mealCardBody);
 
@@ -28,6 +30,11 @@ export default function createCard(mealName, strMealImage, idMeal) {
     const { target } = e;
     if (target.className === 'fas fa-heart') {
       target.classList.add('pop');
+      InvolvementAPI.setLike(`${idMeal}`).then(() => {
+        const like = mealCardBody.querySelector('.likes-counter');
+        like.innerHTML = likes + 1;
+      });
+
       setTimeout(() => {
         target.classList.remove('pop');
       }, 500);

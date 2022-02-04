@@ -23,7 +23,6 @@ export default class FoodAPI {
 
   static FILTER_BY_AREA = 'filter.php?a='
 
-
   static getURL(id) {
     return this.URL + this.BY_ID + id;
   }
@@ -52,6 +51,4 @@ export default class FoodAPI {
         + this.CATEGORIES_LIST[Math.floor(Math.random() * 13)],
     ).then((res) => res.json());
   }
-
 }
-
