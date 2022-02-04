@@ -9,6 +9,7 @@ const displayComment = (meal) => {
     commentModal.className = 'modal-popup';
     commentModal.id = 'comment-popup';
     commentModal.innerHTML = `
+    <button id="close-modal" data-close>✕</button>
     <img src="${selectMeal.strMealThumb}" alt="Meal image">
     <h1>${selectMeal.strMeal}</h1>
     <p>${selectMeal.strInstructions}</p>
@@ -26,6 +27,9 @@ const displayComment = (meal) => {
     commentList.className = 'comment-list';
     commentList.innerHTML = commentsToList(comments);
     commentModal.appendChild(commentList);
+
+    const closeModal = document.getElementById('close-modal');
+    closeModal.addEventListener('click', () => main.removeChild(commentModal));
 
     const addComment = document.getElementById('add-comment-btn');
     addComment.addEventListener('click', async () => {
