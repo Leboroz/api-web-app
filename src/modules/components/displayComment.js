@@ -18,8 +18,8 @@ const displayComment = (meal) => {
     <h1>${selectMeal.strMeal}</h1>
     <p>${selectMeal.strInstructions}</p>
     <h3>Add a Comment</h3>
-    <input class="field" type="text" id='comment-name' placeholder="Your Name">
-    <textarea class="field" id='comment-content' placeholder="Your Insights"></textarea>
+    <input class="field" type="text" id='comment-name' placeholder="Your Name" required>
+    <textarea class="field" id='comment-content' placeholder="Your Insights" required></textarea>
     <button class="btn" id="add-comment-btn" type="button">Submit</button>
     <h2>Comments</h2>`;
     background.appendChild(commentModal);
@@ -44,7 +44,10 @@ const displayComment = (meal) => {
     const addComment = document.getElementById('add-comment-btn');
     addComment.addEventListener('click', async () => {
       const comment = new Comment(selectMeal.idMeal);
+      if (comment.username === '' || comment.comment === '') return;
       comments = await InvolvementAPI.addComments(comment);
+      document.getElementById('comment-name').value = '';
+      document.getElementById('comment-content').value = '';
       commentModal.removeChild(commentList);
       commentList.innerHTML = commentsToList(comments);
       commentModal.appendChild(commentList);
