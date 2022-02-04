@@ -8,7 +8,8 @@ export default class InvolvementAPI {
   static COMMENTS = 'comments?item_id=';
 
   static getComments(id) {
-    return fetch(this.URL + this.APP_ID + this.COMMENTS + id).then((comment) => comment.json());
+    return fetch(this.URL + this.APP_ID + this.COMMENTS + id)
+    .then((comments) => comments.json());
   }
 
   static addComments = async (comment) => {

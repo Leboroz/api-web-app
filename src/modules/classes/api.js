@@ -49,7 +49,8 @@ export default class FoodAPI {
     return fetch(
       this.URL
         + this.FILTER_BY_CATEGORY
-        + this.CATEGORIES_LIST[Math.floor(Math.random() * 13)],
+        // + this.CATEGORIES_LIST[Math.floor(Math.random() * 13)],
+        + this.CATEGORIES_LIST[1],
     ).then((res) => res.json());
   }
 
