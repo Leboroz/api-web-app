@@ -1,4 +1,4 @@
-export default function commentsToList(comments) {
+const commentsToList = (comments) => {
   let list = 'no comments';
   if (comments.length) {
     list = `<h5>${comments.length}  comments</h5>`;
@@ -8,4 +8,6 @@ export default function commentsToList(comments) {
     });
   }
   return list;
-}
+};
+
+export default commentsToList;

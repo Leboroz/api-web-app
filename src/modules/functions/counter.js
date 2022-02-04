@@ -1,3 +1,3 @@
-export default function itemsCounter(element) {
-  return element.children.length;
-}
+const itemsCounter = (element) => element.children.length;
+
+export default itemsCounter;

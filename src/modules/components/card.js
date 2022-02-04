@@ -1,7 +1,7 @@
 import commentPop from './commentpop';
 import InvolvementAPI from '../classes/involvementapi';
 
-export default function createCard(mealName, strMealImage, idMeal, likes) {
+const createCard = (mealName, strMealImage, idMeal, likes) => {
   const mealCard = document.createElement('div');
   mealCard.className = 'card';
   mealCard.id = `meal-${idMeal}`;
@@ -46,4 +46,6 @@ export default function createCard(mealName, strMealImage, idMeal, likes) {
     commentPop(mealCard.id.slice(5));
   });
   return mealCard;
-}
+};
+
+export default createCard;
